@@ -7,6 +7,26 @@
 * {
     border: 1px solid red; /* Adds a red border to every element to identify overflow */
 }
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+body {
+    overflow-x: hidden; /* Temporarily hide horizontal scrollbars */
+}
+button, a {
+    min-width: 48px;
+    min-height: 48px; /* Recommended size for tap targets */
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+body {
+    font-size: 1em; /* Use relative units for font sizes */
+}
+
 
 
 /* General styles */
