@@ -3,6 +3,7 @@
 
 
 /* General styles */
+/* General styles */
 html {
     scroll-behavior: smooth;
 }
@@ -18,20 +19,19 @@ body {
 header {
     padding: 20px;
     background-color: #ffc196;
-    text-align: center;
+    text-align: left;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+    justify-content: space-between; /* Adjust spacing between elements */
     align-items: center;
     border-bottom: 3px solid #0056b3;
 }
 
 header .name {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #0b1001;
-    
-    
-    border-radius: 50px;
+    margin-bottom: 10px;
 }
 
 header a {
@@ -39,11 +39,12 @@ header a {
 }
 
 header button {
+    margin: 5px;
     background-color: #0056b3;
     color: #fff;
-    border:solid;
+    border: solid;
     border-radius: 5px;
-    padding: 10px 10px;
+    padding: 10px;
     cursor: pointer;
     font-weight: bold;
     transition: all 0.3s ease;
@@ -60,6 +61,54 @@ header button img {
 header button:hover {
     background-color: #ef47db;
 }
+
+/* Responsive Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start;
+    }
+
+    header .name {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    header button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+    header {
+        text-align: center;
+        padding: 10px;
+    }
+
+    header .name {
+        font-size: 1.4rem;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    header button {
+        width: 100%; /* Make buttons take full width */
+        font-size: 0.8rem;
+        margin: 5px 0; /* Add vertical spacing */
+        padding: 10px 0;
+    }
+
+    header button img {
+        width: 15px; /* Adjust icon size for smaller screens */
+        height: 15px;
+        margin-right: 5px;
+    }
+}
+
 
 /* Section titles */
 section h1 {
